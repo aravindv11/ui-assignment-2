@@ -5,11 +5,12 @@
     <title>UIT Assignment-2</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    
+    <script defer src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/f65cc028f8.js" crossorigin="anonymous"></script>
     <link href="index.css" rel="stylesheet" />
+    <script src="index.js"></script>
 </head>
 <body>
     <header>
@@ -67,20 +68,21 @@
                       <br/>
                       <div class="form-group adjusment">
                         <label for="exampleInputName">Name:</label>
-                        <input type="text" class="form-control" placeholder="Name" aria-describedby="nameHelp">			
+                        <input type="text" class="form-control name-input" placeholder="Name" aria-describedby="nameHelp" onchange="validateName()">			
                       </div>
                       <div class="form-group adjusment">
                         <label for="exampleInputAge">Age:</label>
-                        <input type="number" class="form-control" placeholder="Age" min="0" max="150" aria-describedby="ageHelp">			
+                        <input type="number" class="form-control age-input" placeholder="Age" min="0" max="150" aria-describedby="ageHelp" onchange="validateAge()"> 			
                       </div>
                       <div class="form-group adjusment">
                         <label for="exampleInputEmail1">Phone No:</label>
-                        <input type="tel" class="form-control" placeholder="Phone Number" maxlength="10" aria-describedby="numberHelp">			
+                        <input type="tel" class="form-control number-input" placeholder="Phone Number" maxlength="10" aria-describedby="numberHelp" onchange="validatePhone()">			
                       </div>
                       <div class="form-group adjusment">
                         <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" placeholder="UserName" name="username" aria-describedby="emailHelp">			
+                        <input type="text" class="form-control email-input" placeholder="UserName" name="Email Address" aria-describedby="emailHelp" onchange="validateMail()">
                       </div>
+                      <p class="error-email-message"></p>
                       <div class="form-group adjusment">
                         <label for="exampleadob">DOB:</label>
                         <input type="date" class="form-control"  name="dob" >
@@ -116,6 +118,6 @@
     </section>
     
 
-    <script type="test/javascript" src="index.js"></script>
+    
 </body>
 </html>
